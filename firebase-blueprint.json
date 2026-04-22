@@ -1,0 +1,32 @@
+{
+  "entities": {
+    "NoteEntry": {
+      "title": "Note Entry",
+      "description": "A guestbook entry with decoration data",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "message": { "type": "string" },
+        "envelopeMessage": { "type": "string" },
+        "bgColor": { "type": "string" },
+        "textColor": { "type": "string" },
+        "texts": { "type": "array" },
+        "stickers": { "type": "array" },
+        "photos": { "type": "array" },
+        "signatures": { "type": "array" },
+        "timestamp": { "type": "string" },
+        "musicUrl": { "type": "string" },
+        "envelopeColor": { "type": "string" },
+        "envelopeEffect": { "type": "string" },
+        "stampUrl": { "type": "string" }
+      },
+      "required": ["name"]
+    }
+  },
+  "firestore": {
+    "notes": {
+      "schema": "NoteEntry",
+      "description": "Collection of all guestbook entries"
+    }
+  }
+}
